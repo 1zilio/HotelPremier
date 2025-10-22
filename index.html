@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Hotel</title>
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="cropped-logo-vermelho.png" id="nav_logo">
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Quartos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#avaliacoes">Feedbacks</a>
+                </li>
+            </ul>
+
+            <div id="cta_buttons">
+                <a href="https:/wa.me/5551995140618" class="btn-default">
+                    Reserve aqui
+                </a>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Quartos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#avaliacoes">Feedbacks</a>
+                </li>
+            </ul>
+
+            <div id="cta_buttons">
+                <a href="https:/wa.me/5551995140618" class="btn-default">
+                    Reserve aqui
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    Experimente o conforto e a tranquilidade que <span>você</span> merece!
+                </h1>
+                <p class="description">
+                    Localizado estrategicamente na região metropolitana de Porto Alegre. Seja para negócios ou lazer,
+                    nossa equipe está preparada para tornar sua estadia agradável.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-default">Ver quartos</a>
+
+                    <a href="tel:+5551995140618" id="phone_button" class="btn-default">
+                        <i class="fa-solid fa-phone"></i>
+                        (51) 99514-0618
+                    </a>
+                </div>
+            </div>
+            <div id="tela">
+                <div id="banner">
+                    <iframe width="850" height="500" class="imgbanner"
+                        src="https://www.youtube.com/embed/IoP6GTfWdW8?si=61EhGSc-6-w7sNml" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Quartos</h2>
+            <h3 class="section-subtitle">Nossos principais quartos</h3>
+
+            <div id="quartos">
+
+                <!--quarto1-->
+
+                <div class="quarto">
+                    <img src="quarto3.jpg" alt="">
+
+                    <h3 class="titulo-quarto">
+                        Quarto Standard
+                    </h3>
+
+                    <span class="quarto-desc">1 - 4 Hospedes; 1 - 4 Camas; 1 Banheiro; Garagem; Wifi; Metragem: 22m²;
+                        Chuveiro a gás; Ar-condicionado; Frigobar</span>
+
+                    <div class="quarto-preco">
+                        <h4>A partir de R$ 170,00/Noite</h4>
+                        <div id="cta_buttons">
+                            <a href="https:/wa.me/5551995140618?text=Olá,%20Gostaria%20de%20reservar%20um%20quarto%20Standard."
+                                class="btn-default">
+                                <i class="fa-solid fa-bell-concierge"></i> <!--ou <i class="fa-solid fa-bed"></i>-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--quarto2-->
+
+                <div class="quarto">
+                    <img src="quarto1.jpg" alt="">
+
+                    <h3 class="titulo-quarto">
+                        Quarto Luxo
+                    </h3>
+
+                    <span class="quarto-desc">1 - 4 Hospedes; 1 - 4 Camas; 1 Banheiro; Garagem; Wifi; Metragem: 25m²;
+                        Chuveiro a gás; Ar-condicionado; Frigobar.</span>
+
+                    <div class="quarto-preco">
+                        <h4>A partir de R$ 192,00/Noite</h4>
+                        <div id="cta_buttons">
+                            <a href="https:/wa.me/5551995140618?text=Olá,%20Gostaria%20de%20reservar%20um%20quarto%20Luxo."
+                                class="btn-default">
+                                <i class="fa-solid fa-bell-concierge"></i> <!--ou <i class="fa-solid fa-bed"></i>-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--quarto3-->
+
+                <div class="quarto">
+
+                    <img src="quarto2.jpg" alt="">
+
+                    <h3 class="titulo-quarto">
+                        Quarto Compact
+                    </h3>
+
+                    <span class="quarto-desc">1 - 5 Hospedes; 1 - 4 Camas; 1 Banheiro; Garagem; Wifi; Metragem: 30m²;
+                        Chuveiro a gás; Ar-condicionado; Frigobar.</span>
+
+                    <div class="quarto-preco">
+                        <h4>A partir de R$ 215,00/Noite</h4>
+                        <div id="cta_buttons">
+                            <a href="https:/wa.me/5551995140618?text=Olá,%20Gostaria%20de%20reservar%20um%20quarto%20Compact."
+                                class="btn-default">
+                                <i class="fa-solid fa-bell-concierge"></i> <!--ou <i class="fa-solid fa-bed"></i>-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="avaliacoes">
+            <iframe id="maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.2024874623003!2d-51.26086161006473!3d-29.858433702858033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519640112baa457%3A0xe459e1c199dc968c!2sHotel%20Premier!5e0!3m2!1spt-BR!2sbr!4v1760744985136!5m2!1spt-BR!2sbr"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="avaliacoes_content">
+                <h2 class="section-title">Avaliações</h2>
+                <h3 class="section-subtitle">Comentarios dos nossos hóspedes</h3>
+
+                <div id="feedbacks">
+                    <div class="feedback">
+                        <img src="emillyLaura.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Emilly
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Ótimo lugar e atendimento 😍❤️ Café com bastante variedades, camas , quarto
+                                aconchegantes"
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <img src="rodrigoScholze.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Rodrigo
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Só tenho a agradecer... estava em viagem longa, bastante cansado, onde necessitava de
+                                um repouso. Fui muito bem recebido, assim como minha família que me acompanhava. Os
+                                valores foram justos, ambiente agradável e limpo. Recomendo a todos."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cta_buttons">
+                    <a href="https://www.google.com/travel/search?q=hotel%20premier&g2lb=202952%2C4965990%2C7231059%2C72414906%2C72471280%2C72472051%2C72485658%2C72560029%2C72573224%2C72616120%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C72959983%2C73053698%2C73059275%2C73064764%2C73107089%2C73125229&hl=pt-BR&gl=br&cs=1&ssta=1&ts=CAEaRwopEicyJTB4OTUxOTY0MDExMmJhYTQ1NzoweGU0NTllMWMxOTlkYzk2OGMSGhIUCgcI6Q8QChgdEgcI6Q8QChgeGAEyAhAA&qs=CAEyFENnc0lqSzN5enBtNC1LemtBUkFCOAJCCQmMltyZweFZ5EIJCYyW3JnB4Vnk&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjw0t-TvbiQAxUAAAAAHQAAAAAQBA"
+                        class="btn-default">Ver mais avaliações</a>
+                </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div id="footercontent">
+            <div id="footer-item">
+                <img src="cropped-logo-vermelho.png" alt="">
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Links</h3>
+                </li>
+                <li>
+                    <a href="#home" class="footer-link">Inicio</a>
+                </li>
+                <li>
+                    <a href="#menu" class="footer-link">Quartos</a>
+                </li>
+                <li>
+                    <a href="#avaliacoes" class="footer-link">Avaliações</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Contatos</h3>
+                </li>
+                <li>
+                    <a href="https://maps.app.goo.gl/uJUjEhrdU2js3ujo8" class="footer-link">Rod. Gov. Leonel de Moura
+                        Brizola, 2500 - Floresta, Nova Santa Rita -
+                        RS, 92480-000</a>
+                </li>
+                <li>
+                    <a href="tel:+5551995140618" class="footer-link">Telefone: (51) 99514-0618</a>
+                </li>
+                <li>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=reservas@hotelpremier.tur.br"
+                        class="footer-link">reservas@hotelpremier.tur.br</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Termos</h3>
+                </li>
+                <li>
+                    <a href="/Política e Hospedagem.pdf" download="Política e Hospedagem" class="footer-link">Política e
+                        Hospedagem</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footercopyright">
+            © 2025 Hotel Premier. Todos os direitos reservados. Site desenvolvido por Pedro Henrique Zilio Santin.
+        </div>
+    </footer>
+
+
+
+    <script src="java.js"></script>
+</body>
+
+</html>
