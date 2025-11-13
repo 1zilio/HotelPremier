@@ -27,11 +27,13 @@ html {
 }
 
 body {
-    background-color: var(--color-primary-0);
+    background-color: var(--color-primary-6);
 }
 
 section {
     padding: 28px 8%;
+    /* Compensar header sticky ao navegar por âncoras */
+    scroll-margin-top: 120px;
 }
 
 /* ==========================
@@ -42,6 +44,9 @@ section {
     --color-primary-1: #ff0000;
     --color-primary-2: #1d1d1d;
     --color-primary-3: #cacaca;
+    --color-primary-4: #505050;
+    --color-primary-5: #a7a7a7;
+    --color-primary-6: #5a5a5a;
 }
 
 
@@ -80,6 +85,7 @@ section {
 @media screen and (min-width: 1500px) {
 
     #home {
+        padding-top: 8vh !important;
         flex-direction: row;
         align-items: stretch;
         justify-content: space-between;
@@ -123,7 +129,7 @@ section {
 
     #banner iframe {
         display: block;
-        margin-top: 35px;
+        margin-top: 40px;
         max-width: 900px;
         width: 100%;
         height: 450px;
@@ -178,7 +184,7 @@ header {
     padding: 28px 8%;
     position: sticky;
     top: 0;
-    background-color: var(--color-primary-0);
+    background-color: var(--color-primary-4);
     z-index: 3;
 
 }
@@ -203,12 +209,12 @@ header {
 
 .nav-item a {
     text-decoration: none;
-    color: var(--color-primary-2);
+    color: var(--color-primary-0);
     font-weight: 600;
 }
 
 .nav-item.active a {
-    color: var(--color-primary-2);
+    color: var(--color-primary-0);
     border-bottom: 3px solid var(--color-primary-1);
 }
 
@@ -256,11 +262,35 @@ header {
 
 /* Home */
 
+
 #home {
+    /* Hero background: responsive, covers area and stays centered */
+    background-image: url('/Inserir\ um\ título\ \(1\).png');
+    /* fallback: replace with your hero image path */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     display: flex;
     min-height: calc(100vh - 123px);
     gap: 40px;
     position: relative;
+    color: var(--color-primary-0);
+}
+
+/* overlay to keep text readable over busy images */
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* make sure content sits above the overlay */
+#home>* {
+    position: relative;
+    z-index: 1;
 }
 
 #cta {
@@ -273,7 +303,7 @@ header {
 
 #cta .title {
     font-size: 4rem;
-    color: var(--color-primary-2);
+    color: var(--color-primary-0);
 }
 
 #cta .title span {
@@ -281,6 +311,7 @@ header {
 }
 
 #cta .description {
+    color: var(--color-primary-0);
     font-size: 1.2rem;
 }
 
@@ -353,12 +384,21 @@ header {
 
     section {
         padding: 16px 2%;
+        /* Header menor em telas móveis: reduzir offset para âncoras */
+        scroll-margin-top: 80px;
     }
 
     #home {
         flex-direction: column;
         gap: 20px;
         min-height: unset;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    /* slightly darker overlay on small screens for better contrast */
+    #home::before {
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
     }
 
     #cta {
@@ -432,6 +472,10 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+.section-subtitle {
+    color: var(--color-primary-0);
 }
 
 #quartos {
@@ -726,7 +770,7 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: var(--color-primary-0);
+    background-color: var(--color-primary-3);
     padding: 12px;
     border-radius: 12px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -847,7 +891,7 @@ footer {
 }
 
 #footercontent {
-    background-color: var(--color-primary-3);
+    background-color: var(--color-primary-4);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -866,6 +910,7 @@ footer {
 }
 
 .footer-list {
+    color: var(--color-primary-1);
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -874,7 +919,7 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: #434343;
+    color: var(--color-primary-3);
     transition: all 0.4s;
 }
 
@@ -885,9 +930,11 @@ footer {
 #footercopyright {
     display: flex;
     justify-content: center;
-    background-color: #a7a7a7;
+    background-color: var(--color-primary-4);
+    color: var(--color-primary-3);
     font-size: 0.9rem;
     padding: 1.5rem;
+    padding-top: 0px;
     width: 100%;
     box-sizing: border-box;
     margin-top: 0;
